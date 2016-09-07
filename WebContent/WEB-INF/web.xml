@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TinderCupid</display-name>
+  <listener>
+		<listener-class>com.tindercupid.manager.TinderCupidListener</listener-class>
+	</listener>
+	<servlet>
+		<description>
+		</description>
+		<display-name>GetAllHttpServlet</display-name>
+		<servlet-name>GetAllHttpServlet</servlet-name>
+		<servlet-class>com.tindercupid.http.GetAllHttpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAllHttpServlet</servlet-name>
+		<url-pattern>/getAllList</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>GetHttpServlet</display-name>
+		<servlet-name>GetHttpServlet</servlet-name>
+		<servlet-class>com.tindercupid.http.GetHttpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetHttpServlet</servlet-name>
+		<url-pattern>/get/*</url-pattern>
+	</servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
